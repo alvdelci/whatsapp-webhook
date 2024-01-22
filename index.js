@@ -12,7 +12,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    res.json({ response: "success" });
+    res.json({ status: "Webhook online" });
 })
 
 app.get("/webhook", (req, res) => {
