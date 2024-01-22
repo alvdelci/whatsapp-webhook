@@ -16,6 +16,9 @@ app.get("/", (req, res) => {
 })
 
 app.get("/webhook", (req, res) => {
+
+    console.log("No GET");
+
     let mode = req.query["hub.mode"];
     let challenge = req.query["hub.challenge"];
     let token = req.query["hub.verify_token"];
@@ -30,6 +33,9 @@ app.get("/webhook", (req, res) => {
 });
 
 app.post("/webhook", (req, res) => {
+
+    console.log("No POST");
+
     let body_params = req.body;
     console.log(JSON.stringify(body_params, null, 2));
 
